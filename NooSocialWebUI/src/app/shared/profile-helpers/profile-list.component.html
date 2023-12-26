@@ -1,0 +1,11 @@
+
+<div class="profiles">
+
+  <div class="noo-progress" *ngIf="loading != LoadingState.LOADED"><div class="color"></div></div>
+
+  <app-profile-item 
+    *ngFor="let profile of profiles; let i = index" 
+    [profile]="profile"
+  ></app-profile-item>
+  
+</div>

@@ -1,0 +1,12 @@
+
+<div 
+  [class]="['avatar', 'type-' + user.type]" 
+  (click)="toggleAvatarSelected(user.username)"
+  
+>
+  <img 
+    [src]="user.avatar" 
+    [alt]="user.type + '@' + user.username"
+    [title]="user.type + '@' + user.username"
+  >
+</div>

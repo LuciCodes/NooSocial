@@ -1,0 +1,11 @@
+<button
+  class="btn btn-sm"
+  [ngClass]="{
+    disabled: isSubmitting,
+    'btn-outline-primary': !false,
+    'btn-primary': false
+  }"
+  (click)="toggleFavorite()"
+>
+  <i class="ion-thumbsup"></i> <ng-content></ng-content>
+</button>

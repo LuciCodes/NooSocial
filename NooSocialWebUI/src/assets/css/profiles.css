@@ -1,0 +1,231 @@
+
+
+.profiles {
+
+  display: flex;
+  
+  justify-content: left;
+
+  width: 240px;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.25);
+  
+  border-right:1px solid rgba(255, 255, 255, 0.7);
+}
+
+.profiles > [class] {
+
+  display: flex;  /**/
+}
+
+.profiles .noo-progress {
+  margin-top: 2em;
+  max-width: 100px;
+}
+
+.profile {
+
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  height: 100%;
+
+  width: 238px;   /* border illusion to the right */
+  max-width: 420px;
+
+  flex: 1 1 0px;
+  background-color: var(--timeline-bg);
+  overflow: hidden;
+  
+  transition: 0.2s cubic-bezier(.35,.31,.25,1) flex, 0.1s linear color;
+}
+
+.profile-header-menu-btn {
+
+  position: relative;
+  float: left;
+  margin: 6px -38px -38px 6px;
+  z-index: 20;
+}
+
+.profile-header-menu-btn span {
+  display: inline-block;
+  margin-top: 4px;
+  margin-left: 1px;
+}
+
+.profile-header h4 {
+
+  margin: 0;
+  height: auto;
+  padding: 0.8em 0.4em 0.6em 0.8em;
+  font-size: 1em;
+  font-weight: bold;
+    
+  user-select: none;
+
+  opacity: 0.7;
+
+  background-color: var(--timeline-header-bg);
+}
+
+.profile-settings {
+  display: none;
+}
+
+.profile-banner img {
+
+  width: 100%;
+}
+
+
+.profile-info {
+
+  width: calc(100% - 4px);
+  height: auto;
+
+  margin: 2px 0px 0px 2px;
+  padding: 0;
+  font-size: 0.8em;
+
+  background-color: var(--white4);
+  border-bottom-right-radius: 16px;
+  border:1px solid var(--gray4);
+
+}
+
+.state-footer-expanded .profile-info {
+
+  float: none;
+  padding: 0.4em 1em;
+  margin: 0em 0em 0.2em 2px;
+  max-height: 100em;
+  
+  opacity: 1;
+  transition: 0.25s ease-in max-height;
+}
+
+.profile-info p {
+  line-height: 1.8em;
+  margin-bottom: 0.4em;
+}
+
+.profile-info p > span:first-child {
+  display: inline-block;
+  min-width: 9em;
+  text-align: right;
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+}
+
+.profile-info p > span:last-child {
+  font-weight: bold;
+}
+
+.profile-info p.multi-row span:last-child {
+  vertical-align: text-top;
+  display: inline-block;
+  width: 50%;
+}
+
+.profile-info p.buttons {
+  text-align: center;
+  padding: 1em 1em 0.5em 1em;
+}
+
+/*
+.profile-settings {
+    
+  padding: 0.4em 0.2em;
+  max-height: 0;
+  height: 0;
+  
+  overflow: hidden;
+
+  margin-bottom: -1.25em;
+
+  opacity: 0;
+  
+  transition: 0.2s ease-out height, 
+              0.2s ease-out max-height,
+              0.1s linear margin-bottom, 
+              0.1s linear opacity;
+}
+
+.state-settings-visible  .profile-settings {
+
+  margin-bottom: 0em;
+  max-height: 88em;
+  height: 88em;
+
+  opacity: 1;
+  
+  transition: 0.3s ease-in max-height, 
+  0.1s linear margin-bottom, 
+              0.1s linear opacity;
+}
+
+.profile-settings h3 {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.profile-settings form {
+  
+  display: flex;
+  width: 100%;
+}
+
+.profile-settings form > div {
+  
+  display: flex;
+  width: 100%;
+}
+
+.profile-settings form > div fieldset {
+  
+  width: 50%;
+  margin: 0.2em;
+}
+
+.profile-settings form > div fieldset legend {
+
+  margin: 0;
+
+  font-size: 14px;
+  color: var(--white2);
+  padding: 0.2em 0.8em;
+  width: 100%;
+  background-color: var(--gray3);
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.profile-settings form div.input-row {
+
+  font-size: 14px;
+  padding:0.7em 0.5em 0.5em 0.4em;
+  background-color: #cecece;
+}
+
+.profile-settings form div.input-row:last-child {
+  border-bottom-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+}
+
+.input-row .label-text {
+  font-size: 0.9em;
+}
+
+
+.profile-settings form > div fieldset.buttons {
+  width: 100%;
+  min-height: 6em;
+}
+
+.profile-settings form > div fieldset.buttons button:first-child {
+  margin-right: 1em;
+}
+*/

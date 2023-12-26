@@ -1,0 +1,83 @@
+<nav class="navbar navbar-light">
+  
+  <div>
+    <button 
+      class="no-chrome menu" 
+      (click)="vs.toggleState('ham-expanded')"
+    >
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <div *ngIf="currentUser$ | async as currentUser" class="avatar">
+    <a
+      class="nav-link"
+      [routerLink]="['/profile', currentUser.username]"
+      routerLinkActive="active"
+    >
+      <img [src]="currentUser.avatar" alt="">
+    </a>
+    {{ currentUser.username }}
+  </div>
+
+  <div *ngIf="!(userService.isAuthenticated | async)" class="create-account">
+    
+    <a href="javascript:;" (click)="toggleLogin()">
+      Login
+    </a> or maybe <a href="#">
+      <span class="noo1">Get Noo'd - </span>
+      <span class="noo2">Create an account!</span>
+      <span class="material-symbols-outlined" style="font-size: 16px;">bolt</span>
+    </a>
+  </div>
+
+  <div class="machine-msg">
+    &nbsp;&nbsp;Read a
+    <a href="#">
+      message from our machine <span style="text-decoration: line-through;">overloards</span> ambassators
+    </a>
+  </div>
+
+  <div class="noo-menu">
+    <img src="/assets/images/Noo-logo.png" alt="Noo Social">
+    &nbsp;&nbsp;
+    <a href="javascript:;" (click)="toggleAbout()">About <span class="classy-font">&</span> stuff</a>
+  </div>
+
+
+
+
+
+  <div class="user" style="display: none;">
+
+    <a href="#" noo-bind-to="user.nickname">&nbsp;</a>
+
+    <div class="submenu">
+      <ul>
+        <li>
+          <button onclick="nooViewState.setViewState('view-profile')" type="button">
+            <span class="material-symbols-outlined">face</span>
+            <span>My Profile</span>
+          </button>
+        </li>
+        <li>
+          <button onclick="nooViewState.setViewState('view-settings')" type="button">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Settings</span>
+          </button>
+        </li>
+        <li>
+          <button onclick="Logout()" type="button">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Logout</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+<app-about></app-about>
+
+<app-login-subscribe></app-login-subscribe>

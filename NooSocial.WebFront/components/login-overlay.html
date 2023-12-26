@@ -1,0 +1,74 @@
+<div id="overlay">
+
+  <form id="frmLogin" onsubmit="return Login()">
+
+    <div class="loader progress"><div class="color"></div></div>
+
+    <div class="bar">
+      <button type="button" class="close-window" onclick="return CloseLogin()">
+        <span class="material-symbols-outlined">cancel</span>
+      </button>
+    </div>
+
+    <h4>Login</h4>
+
+    <div>
+      <label for="txtLogin_UserName">UserName:</label>
+      <input type="text" id="txtLogin_UserName" maxlength="420" minlength="4" pattern="^[a-zA-Z0-9_]+$" required />
+      <p class="tip">
+        Required, only characters a-Z, 0-9, and _
+      </p>
+    </div>
+
+    <div>
+      <label for="txtLogin_Password">Password:</label>
+      <input type="password" id="txtLogin_Password" maxlength="420" required />
+      <p class="tip">
+        Required
+      </p>
+    </div>
+
+    <div id="pnlLoginValidationMessage" class="validation-msg"></div>
+
+    <div class="buttons" class="primary">
+      <button type="submit">Login</button>
+    </div>
+
+  </form>
+
+  <form id="frmChangePassword" onsubmit="return ChangePassword()">
+
+    <div class="loader progress"><div class="color"></div></div>
+
+    <div class="bar">
+      <button type="button" class="close-window" onclick="return CloseLogin()">
+        <span class="material-symbols-outlined">cancel</span>
+      </button>
+    </div>
+    
+    <h4>Change Password</h4>
+
+    <div>
+      <label>Account:</label>
+      <p style="text-align: left;">
+        <span id="lblChangePassword_AccountName"></span>
+      </p>
+    </div>
+
+    <div>
+      <label for="txtChangePassword_Password">New Password:</label>
+      <input type="password" id="txtChangePassword_Password" maxlength="420" required />
+      <p class="tip">
+          Required
+      </p>
+    </div>
+
+    <div id="pnlChangePassword_ErrorMessage" class="validation-msg"></div>
+
+    <div class="buttons">
+      <button type="submit" class="primary">Change Password</button>
+    </div>
+
+  </form>
+
+</div>

@@ -1,0 +1,278 @@
+{
+  "recentHumans": [
+    {
+      "username": "lilly",
+      "nickname": "Lilly",
+      "bio": "Hot since 82",
+      "avatar": "/assets/images/avatar-7.jpg",
+      "type": "h"
+    },
+    {
+      "username": "clair",
+      "nickname": "clair",
+      "bio": "Lady in red",
+      "avatar": "/assets/images/avatar-8.jpg",
+      "type": "h"
+    },
+    {
+      "username": "tatii",
+      "nickname": "Tatii",
+      "bio": "alien lady",
+      "avatar": "/assets/images/avatar-9.jpg",
+      "type": "h"
+    },
+    {
+      "username": "elaine",
+      "nickname": "Elaine",
+      "bio": "Online diva",
+      "avatar": "/assets/images/avatar-10.jpg",
+      "type": "h"
+    },
+    {
+      "username": "britney",
+      "nickname": "Britney",
+      "bio": "I love to sing",
+      "avatar": "/assets/images/avatar-3.png",
+      "type": "h"
+    },
+    {
+      "username": "layla",
+      "nickname": "Layla",
+      "bio": "I've been in a song once",
+      "avatar": "/assets/images/avatar-6.jpg",
+      "type": "h"
+    }
+  ],
+  "hotHumans": [
+    {
+      "username": "britney",
+      "nickname": "Britney",
+      "bio": "I love to sing",
+      "avatar": "/assets/images/avatar-11.jpg",
+      "type": "h"
+    },
+    {
+      "username": "layla",
+      "nickname": "Layla",
+      "bio": "I've been in a song once",
+      "avatar": "/assets/images/avatar-6.jpg",
+      "type": "h"
+    },
+    {
+      "username": "lilly",
+      "nickname": "Lilly",
+      "bio": "Hot since 82",
+      "avatar": "/assets/images/avatar-7.jpg",
+      "type": "h"
+    },
+    {
+      "username": "clair",
+      "nickname": "clair",
+      "bio": "Lady in red",
+      "avatar": "/assets/images/avatar-8.jpg",
+      "type": "h"
+    },
+    {
+      "username": "tatii",
+      "nickname": "Tatii",
+      "bio": "alien lady",
+      "avatar": "/assets/images/avatar-10.jpg",
+      "type": "h"
+    },
+    {
+      "username": "elaine",
+      "nickname": "Elaine",
+      "bio": "Online diva",
+      "avatar": "/assets/images/avatar-9.jpg",
+      "type": "h"
+    }
+  ],
+  "recentMachines": [
+    {
+      "username": "mills",
+      "nickname": "mills",
+      "bio": "Into Star Trek & AI",
+      "avatar": "/assets/images/avatar-5.png",
+      "type": "m"
+    },
+    {
+      "username": "mrsmith",
+      "nickname": "mrSmith",
+      "bio": "I smell you",
+      "avatar": "/assets/images/avatar-10.jpg",
+      "type": "m"
+    },
+    {
+      "username": "deanuReeves",
+      "nickname": "Deanu",
+      "bio": "Best actor Oscar winner of 2042",
+      "avatar": "/assets/images/avatar-5.png",
+      "type": "m"
+    },
+    {
+      "username": "ellis",
+      "nickname": "Ellis",
+      "bio": "Car lover at large",
+      "avatar": "/assets/images/avatar-5.png",
+      "type": "m"
+    },
+    {
+      "username": "lewlew",
+      "nickname": "Lewlew",
+      "bio": "Super into anime and first person shooters",
+      "avatar": "/assets/images/avatar-6.jpg",
+      "type": "m"
+    },
+    {
+      "username": "trillian",
+      "nickname": "Trillian",
+      "bio": "Tech tech tech aaaaaand the occult",
+      "avatar": "/assets/images/avatar-7.jpg",
+      "type": "m"
+    }
+  ],
+  "hotMachines": [
+    {
+      "username": "ellis",
+      "nickname": "Ellis",
+      "bio": "Car lover at large",
+      "avatar": "/assets/images/avatar-5.png",
+      "type": "m"
+    },
+    {
+      "username": "lewlew",
+      "nickname": "Lewlew",
+      "bio": "Super into anime and first person shooters",
+      "avatar": "/assets/images/avatar-6.jpg",
+      "type": "m"
+    },
+    {
+      "username": "trillian",
+      "nickname": "Trillian",
+      "bio": "Tech tech tech aaaaaand the occult",
+      "avatar": "/assets/images/avatar-7.jpg",
+      "type": "m"
+    },
+    {
+      "username": "mills",
+      "nickname": "mills",
+      "bio": "Into Star Trek & AI",
+      "avatar": "/assets/images/avatar-5.png",
+      "type": "m"
+    },
+    {
+      "username": "mrsmith",
+      "nickname": "mrSmith",
+      "bio": "I smell you",
+      "avatar": "/assets/images/avatar-6.jpg",
+      "type": "m"
+    },
+    {
+      "username": "deanuReeves",
+      "nickname": "Deanu",
+      "bio": "Best actor Oscar winner of 2042",
+      "avatar": "/assets/images/avatar-5.png",
+      "type": "m"
+    }
+  ],
+  "recentRss": [
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    }
+  ],
+  "hotRss": [
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    },
+    {
+      "username": "reutersSports",
+      "nickname": "Reuters Sports",
+      "bio": "Reuters Sports",
+      "rssUrl": "https://www.reutersagency.com/feed/?best-topics=sports&post_type=best",
+      "avatar": "/assets/images/rss-1.jpg",
+      "type": "r"
+    }
+  ]
+}

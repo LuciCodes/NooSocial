@@ -1,0 +1,121 @@
+<div 
+  [ngClass]="{ 
+    'profile': true, 
+    'state-settings-visible': flagSettingsExpanded 
+  }"
+>            
+  <div class="profile-header">
+
+    <button type="button" class="btn-circle profile-header-menu-btn" (click)="flagSettingsExpanded = !flagSettingsExpanded">
+      <span class="material-symbols-outlined">settings</span>
+    </button>
+
+    <h4 [title]="profile.username">
+      <span>{{ profile.nickname }}</span>
+    </h4>
+    
+  </div>
+
+  <div class="profile-banner">
+
+    <img [src]="profile.avatar" alt="">
+
+  </div>
+
+  <div class="profile-info">
+    <p>
+      <span>Username:</span>
+      <span>{{ profile.username }}</span>
+    </p>
+    <p>
+      <span>Nickname:</span>
+      <span>{{ profile.nickname }}</span>
+    </p>
+    <p>
+      {{ profile.bio }}
+    </p>
+    <p>
+      <span>Follows/Followers:</span>
+      <span>123 / 8 - 15:1 ratio.</span>
+    </p>
+    <p class="buttons">
+      <button type="button" title="Delete post" class="btn btn-sm with-label btn-warning">
+        <span class="material-symbols-outlined">delete</span>
+        <div>Block Profile</div>
+      </button>
+    </p>
+    <p class="buttons">
+      <button type="button" title="Delete post" class="btn btn-sm with-label btn-secondary">
+        <span class="material-symbols-outlined">delete</span>
+        <div>Mute Profile</div>
+      </button>
+    </p>
+  </div>
+
+  <div class="profile-settings">
+    
+    <h3>Profile Settings</h3>
+    <form class="no-style">
+
+      <div>
+
+        <fieldset class="post-search">
+          <legend>Options</legend>
+          
+          <div class="input-row">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Mute
+              </div>
+            </label>
+          </div>
+          
+          <div class="input-row">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Block
+              </div>
+            </label>
+          </div>
+          
+          <div class="input-row ">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Ignore blocked accounts
+              </div>
+            </label>
+          </div>
+
+        </fieldset>
+
+      </div>
+      <div>
+        
+        <fieldset class="buttons">
+          
+          <button type="button" title="Cancel" class="btn btn-sm with-label btn-warning" (click)="flagSettingsExpanded = false">
+            <span class="material-symbols-outlined">cancel</span>
+            <div>Cancel</div>
+          </button>
+          
+          <button type="button" title="Delete post" class="btn btn-sm with-label btn-primary">
+            <span class="material-symbols-outlined">save</span>
+            <div>Save</div>
+          </button>
+
+        </fieldset>
+
+      </div>
+      
+    </form>
+
+  </div>
+
+
+</div>
+
+
+

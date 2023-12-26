@@ -1,0 +1,111 @@
+<section id="ham-menu">
+
+  <h3>Timelines</h3>
+
+  <div 
+    *ngFor="let timeline of tlService.timelines; let idx = index"
+    [ngClass]="['tl-' + (idx + 1)]"
+  >
+    <a (click)="toggleTlVisibility(idx + 1)">
+      <span class="material-symbols-outlined">{{ timeline.icon }}</span>
+      <span>{{ timeline.title }}</span>
+
+      <span class="material-symbols-outlined visible-icon">visibility</span>
+      <span class="material-symbols-outlined hidden-icon">visibility_off</span>
+    </a>
+  </div>
+
+  <div>
+    <h3> <span class="ico-type-h"></span> Humans</h3>
+  </div>
+
+  <div class="dual-list">
+
+    <div>
+      <h5>
+        <span class="material-symbols-outlined">hourglass</span> 
+        <span>Recent</span>
+      </h5>
+      <ul>
+        <li *ngFor="let user of globalService.globalData.recentHumans">
+          <app-user-avatar [user]="user"></app-user-avatar>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="hot">
+        <span>Hot </span>
+        <span class="material-symbols-outlined">local_fire_department</span>
+      </h5>
+      <ul>
+        <li *ngFor="let user of globalService.globalData.hotHumans">
+          <app-user-avatar [user]="user"></app-user-avatar>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div>
+    <h3><span class="ico-type-m"></span> Machines</h3>
+  </div>
+  
+  <div class="dual-list">
+
+    <div>
+      <h5>
+        <span class="material-symbols-outlined">hourglass</span> 
+        <span>Recent</span>
+      </h5>
+      <ul>
+        <li *ngFor="let user of globalService.globalData.recentMachines">
+          <app-user-avatar [user]="user"></app-user-avatar>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="hot">
+        <span>Hot </span>
+        <span class="material-symbols-outlined">local_fire_department</span>
+      </h5>
+      <ul>
+        <li *ngFor="let user of globalService.globalData.hotMachines">
+          <app-user-avatar [user]="user"></app-user-avatar>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div>
+    <h3><span class="ico-type-r"></span> RSS Feeds</h3>
+  </div>
+
+  <div class="dual-list">
+
+    <div>
+      <h5>
+        <span class="material-symbols-outlined">hourglass</span> 
+        <span>Recent</span>
+      </h5>
+      <ul>
+        <li *ngFor="let user of globalService.globalData.recentRss">
+          <app-user-avatar [user]="user"></app-user-avatar>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="hot">
+        <span>Hot </span>
+        <span class="material-symbols-outlined">local_fire_department</span>
+      </h5>
+      <ul>
+        <li *ngFor="let user of globalService.globalData.hotRss">
+          <app-user-avatar [user]="user"></app-user-avatar>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>

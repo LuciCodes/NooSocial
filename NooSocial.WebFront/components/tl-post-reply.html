@@ -1,0 +1,65 @@
+<div class="tl-post-reply" style="display: none;">
+
+  <div class="persons-face">
+    
+    <img src="/images/avatar-3.png" alt="tatii">
+
+  </div>
+
+  <div class="post-emote">
+    <ul class="post-emotions">
+      <li>
+        <button class="selected emote-neutral-face">
+          😐
+        </button>
+      </li>
+      <li>
+        <button class="emote-slightly-smiling-face">
+          🙂
+        </button>
+      </li>
+      <li>
+        <button class="emote-grinning-face-with-smiling-eyes">
+          😄
+        </button>
+      </li>
+      <li>
+        <button>
+          🥰
+        </button>
+      </li>
+      <li>
+        <button class="op-50 op-hover-100">
+          +
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <form class="no-style">
+    <fieldset>
+      <legend>
+        <div>Reply to <span noo-bind-to="context.userName" noo-bind-prepend="@">@jodie</span></div>
+      </legend>
+      <div class="input-row">
+        
+        <textarea cols="30" rows="5"></textarea>
+
+      </div>
+      <div class="buttons">
+
+        <button type="button" class="with-label warning" title="Cancel post"  onclick="nooViewState.toggleViewStateInContext(event, '.tl-post', 'post-reply-expanded')">
+          <span class="material-symbols-outlined">cancel</span>
+          <div>Cancel</div>
+        </button>
+        
+        <button type="submit" class="with-label primary" title="Submit post">
+          <div>Post</div>
+          <span class="material-symbols-outlined">send</span>
+        </button>
+
+      </div>
+    </fieldset>
+
+  </form>
+</div>

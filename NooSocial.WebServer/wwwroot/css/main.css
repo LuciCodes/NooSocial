@@ -1,0 +1,405 @@
+@import url("vars.css");
+@import url("forms.css");
+@import url("animations.css");
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  background-color: var(--gray2);
+  padding-bottom: 21em;
+}
+
+em {
+  font-weight: bold;
+}
+
+body > div {
+  margin: auto;
+  max-width: 1024px;
+}
+
+a, a:visited {
+  color: var(--link-text);
+}
+
+button {
+
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+
+  color: var(--btn-primary-text);
+  background-color: var(--btn-primary-bg);
+
+  border-radius: 12px;
+  border-style: solid;
+  border-color:var(--btn-primary-border);
+
+  cursor: pointer;
+}
+
+h1, h2 {
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.666em;
+}
+
+h1 {
+  margin-top: 42px;
+  font-weight: bold;
+  font-size: 1.8em;
+  text-align: center;
+  color: #023535;
+}
+
+h2 {
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1.6em;
+  text-align: center;
+  color: #737373;
+}
+
+h3 {
+  line-height: 2em;
+}
+
+  h3 em {
+    color: #015958;
+  }
+
+h4 {
+  padding: 2em 1em 0em 1em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6em;
+  letter-spacing: 0.07em;
+  color: #772559;
+}
+
+h3.home {
+  padding-left: 50%;
+}
+
+ul.home, ul.subitems {
+  margin: auto;
+  margin-top: 1.5em;
+  max-width: 42em;
+}
+
+ul.subitems {
+  padding-left: 55%;
+}
+
+li {
+  line-height: 1.8em;
+  margin-bottom: 0.8em;
+}
+
+input, textarea {
+
+  padding: 0.5em;
+  border-radius: 8px;
+  font-size: 1.1em;
+  
+  color: var(--form-ctrl-text);
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--form-ctrl-border);
+  background-color: var(--form-ctrl-bg);
+}
+
+input:invalid {
+  border-color:var(--red3);
+}
+
+[noo-if-has-user='true'] {
+  display: none;
+}
+
+.state-has-user [noo-if-has-user='true'] {
+  display: inherit;
+}
+
+.state-has-user [noo-if-has-user='false'] {
+  display: none;
+}
+
+.home-banner {
+  border: 3px solid #333;
+  max-width: 480px;
+  margin: auto;
+  margin-top: 2em;
+}
+
+
+#overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.state-overlay-visible #overlay,
+.state-new-password-required #overlay,
+.state-lost-session #overlay {
+  
+  display: flex;
+  transition: 1s linear all;
+}
+
+.validation-msg {
+
+  display: none;
+  padding: 0.4em;
+  margin-bottom:1em;
+
+  color:var(--gray1);
+  background-color:var(--red4);
+  border-radius: 8px;
+}
+
+.no-chrome {
+  color: var(--gray4);
+  background-color: transparent;
+  border:none;
+}
+
+#pnlMainMenu {
+  min-height: 3em;
+  border-bottom: 1px solid var(--gray3);
+
+}
+
+/*
+#pnlMainMenu > div:first-child {
+  
+  padding-left:35px;
+  
+  background:url(/images/noo-eyes-32.png) no-repeat 10px 3px;
+}
+*/
+
+#pnlMainMenu > div {
+  display: block;
+  float: left;
+}
+
+button.menu {
+  padding:0.75em 0.8em 0.2em 0.5em;
+  transition: 0.2s linear all;
+}
+
+.state-content-menu-visible button.menu {
+  
+  padding:0.9em 0.5em 0.0em 0.8em;
+  
+  rotate: 90deg;
+}
+
+#pnlMainMenu > div.user {
+  
+  padding: 0.9em 0.4em 0.2em 0em;
+}
+
+#pnlMainMenu > div.avatar {
+  
+  margin: 9px 0.4em 0px 0em;
+
+  width: 32px;
+  height: 32px;
+  background-color: lime;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 1px solid var(--pink3);
+  background-size: contain;
+  box-shadow: 0px 0px 8px var(--gray3);
+}
+
+#pnlMainMenu > div.user a {
+  
+  color: var(--gray4);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.submenu {
+  
+  display: none;
+  background-color: var(--gray1);
+  border: 1px solid var(--gray4);
+  
+  z-index: 100;
+}
+
+.user a:focus + .submenu, 
+.user:hover .submenu {
+
+  position: relative;
+
+  display: block;
+}
+
+.submenu > ul {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+.submenu > ul >li {
+
+  margin: 0.2em 0em 0.2em 0em;
+  padding:0;
+}
+
+.submenu button {
+
+  padding: 0.4em 2em 0.4em 0.5em;
+  width: 100%;
+  text-align: left;
+  font-size: 0.9em;
+  border: 0px;
+  border-radius: 0;
+  color: var(--gray4);
+  background-color: var(--gray1);
+
+  transition: 0.1s linear all;
+}
+
+.submenu button > span {
+  float: left;
+}
+
+.submenu  button > span:nth-child(2) {
+  
+  margin: 0.2em 0px 0px 0.5em;
+}
+
+.submenu button:hover {
+
+  color: var(--gray1);
+  background-color: var(--gray4);
+}
+
+#pnlContentWindow {
+
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top:50px;
+  width: 100%;
+  height: calc(100% - 50px);
+
+  background-color: var(--pnl-content-window-bg);
+}
+
+#pnlContentMenu {
+
+  display: block;
+  float: left;
+
+  width: 0px;
+  height: 100%;
+  opacity: 0;
+
+  background-color: var(--pnl-content-menu-bg);
+  border-right: 1px solid var(--pnl-content-menu-border);
+
+  transition: 0.2s linear all;
+  overflow: hidden;
+
+  transition: 0.1s linear opacity, 0.2s linear width;
+}
+
+.state-content-menu-visible #pnlContentMenu {
+  
+  opacity: 1;
+  width: 200px;
+}
+
+#pnlContentMenu > div:first-child {
+  margin-top: 1em;
+}
+
+#pnlContentMenu > div {
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto;
+
+  margin-bottom: 1em;
+}
+
+
+#pnlContentMenu a {
+
+  display: inline-block;
+  padding: 0.4em 0.4em 0.4em 0.5em;
+  min-width: 100%;
+  text-decoration: none;
+  color: var(--gray4);
+  overflow: hidden;
+  white-space: nowrap;
+  
+  transition: 0.1s linear all;
+}
+
+#pnlContentMenu a span:first-child {
+  vertical-align: bottom;
+  font-size: 24px !important;
+}
+
+#pnlContentMenu a span:last-child {
+  
+  margin-top: 0.3em;
+}
+
+#pnlContentMenu a:hover {
+  color: var(--gray1);
+  background-color: var(--gray4);
+}
+
+#pnlContent {
+  flex-grow: 1;
+}
+
+.timelines {
+
+  display: flex;
+  
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.timelines .progress {
+  margin-top: 2em;
+  max-width: 100px;
+}
+
+.timeline {
+
+  padding: 0px 1em 0px 1em;
+  min-height: 100%;
+  width: 50%;
+  background-color: var(--timeline-bg);
+  overflow-y: auto;
+}
+
+  .tl-post h1 {
+    margin: 0;
+  }

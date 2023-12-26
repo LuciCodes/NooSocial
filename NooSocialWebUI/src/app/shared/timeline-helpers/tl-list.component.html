@@ -1,0 +1,12 @@
+
+<div class="timelines">
+
+  <div class="noo-progress" *ngIf="loading != LoadingState.LOADED"><div class="color"></div></div>
+
+  <app-tl-item 
+    *ngFor="let timeline of timelines; let i = index" 
+    [timeline]="timeline"
+    [ngClass]="['tl-' + (i + 1)]"
+  ></app-tl-item>
+  
+</div>

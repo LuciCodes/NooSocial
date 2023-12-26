@@ -1,0 +1,22 @@
+
+.emote-neutral-face,
+.emote-slightly-smiling-face,
+.emote-grinning-face-with-smiling-eyes {
+  /* slightly off-center emojis */
+  padding: 0em 0em 0.1em 0em !important; 
+}
+
+.emote-red-heart {
+  color: red !important;
+}
+
+ul.post-emotions li button:hover,
+ul.post-emotions li button.selected {
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.emote-slightly-smiling-face:before { content: '🙂'; }
+.emote-neutral-face:before { content: '😐'; }
+.emote-grinning-face-with-smiling-eyes:before { content: '😄'; }
+.emote-smiling-face-with-hearts:before { content: '🥰'; }

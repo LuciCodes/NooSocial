@@ -1,0 +1,65 @@
+
+.home-banner {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-banner > div {
+
+  text-align: right;
+  width: 46%;
+  flex-grow: 0;
+}
+
+.home-banner > div:nth-child(2) {
+  width: 54%;
+}
+
+h3.home {
+  
+  font-size: 1.1em;
+  line-height: 2em;
+  text-align: left;
+  padding-left: 2em;
+}
+
+ul.home, ul.subitems {
+  margin: auto;
+  margin-top: 1.5em;
+  max-width: 42em;
+}
+
+ul.subitems {
+  padding-left: 55%;
+
+}
+
+li {
+  line-height: 1.8em;
+  margin-bottom: 0.8em;
+}
+
+.subitems2 {
+
+  padding: 0em 1em 1em 1em;
+  max-width: 999px;
+  min-height: 300px;
+  margin: auto;
+}
+
+.subitems2 > ul {
+
+  padding-left: 54%;
+  padding-top: 30px;
+}
+
+.subitems2 > img {
+
+  float: left;
+  border: 3px solid #333;
+  max-width: 480px;
+  margin: auto;
+  margin-top: 2em;
+}
+
+

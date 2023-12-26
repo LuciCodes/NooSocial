@@ -1,0 +1,11 @@
+<button
+  class="btn btn-sm"
+  [ngClass]="{
+    disabled: isSubmitting,
+    'btn-outline-primary': !false,
+    'btn-primary': false
+  }"
+  (click)="toggleFavorite()"
+>
+  <span class="material-symbols-outlined">report</span> <ng-content></ng-content>
+</button>

@@ -1,0 +1,467 @@
+<div class="timeline tl-main" noo-bind-to="timelines" noo-bind-my="children">
+            
+  <div class="tl-header" onclick="nooViewState.toggleViewState('main-tl-collapsed')">
+
+    <button type="button" class="circle-btn tl-header-menu-btn"  onclick="nooViewState.toggleViewStateInContext(event, '.timeline', 'settings-visible')">
+      <span class="material-symbols-outlined">settings</span>
+    </button>
+
+    <h4>
+      <span>Main Timeline</span>
+    </h4>
+    <ul class="tl-recent-authors">
+      <li noo-data="item.recentAuthors">
+        <button type="button">
+          <img src="/images/avatar-1.png" alt="luciwaves profile picture">
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tl-settings">
+    
+    <h3>Timeline Settings</h3>
+    <form class="no-style">
+
+      <div>
+
+        <fieldset class="search">
+          <legend>Search Parameters</legend>
+          <div class="input-row">
+            <label>
+              <div class="label-text">
+                Users:
+              </div>
+              <div class="input">
+
+                <select>
+                  <option value="1">All</option>
+                  <option value="2">All Humans</option>
+                  <option value="3">All Bots</option>
+                  <option value="4">Humans I Follow</option>
+                  <option value="5">Bots I Follow</option>
+                  <option value="6">Humans I Don't Follow</option>
+                  <option value="7">Bots I Don't Follow</option>
+                  <option value="8">Custom include list</option>
+                  <option value="9">Custom exclude list</option>
+                </select>
+  
+              </div>
+            </label>
+          </div>
+          <div class="input-row">
+            <label>
+              <div class="label-text">
+                Date Published:
+              </div>
+              <div class="input">
+
+                <select>
+                  <option value="1">All Time</option>
+                  <option value="2">Today</option>
+                  <option value="3">This Week</option>
+                  <option value="4">Past 7 days</option>
+                  <option value="5">This Month</option>
+                  <option value="6">Past 30 days</option>
+                  <option value="7">This Year</option>
+                  <option value="8">Past 365 days</option>
+                  <option value="9">Custom</option>
+                </select>
+  
+              </div>
+            </label>
+          </div>
+          <div class="input-row">
+            <label>
+              <div class="label-text">
+                Primary Sorting:
+              </div>
+              <div class="input">
+
+                <select>
+                  <option value="1">Published date ASC</option>
+                  <option value="2">Published date DESC</option>
+                  <option value="3">Text ASC</option>
+                  <option value="4">Text DESC</option>
+                  <option value="5">Username ASC</option>
+                  <option value="6">Username DESC</option>
+                  <option value="7">Engagement ASC</option>
+                  <option value="8">Engagement DESC</option>
+                </select>
+  
+              </div>
+            </label>
+          </div>
+          <div class="input-row">
+            <label>
+              <div class="label-text">
+                Secondary Sorting:
+              </div>
+              <div class="input">
+
+                <select>
+                  <option value="0">(none)</option>
+                  <option value="1">Published date ASC</option>
+                  <option value="2">Published date DESC</option>
+                  <option value="3">Text ASC</option>
+                  <option value="4">Text DESC</option>
+                  <option value="5">Username ASC</option>
+                  <option value="6">Username DESC</option>
+                  <option value="7">Engagement ASC</option>
+                  <option value="8">Engagement DESC</option>
+                </select>
+  
+              </div>
+            </label>
+          </div>
+        </fieldset>
+  
+        <fieldset class="post-search">
+          <legend>Search Flags</legend>
+          
+          <div class="input-row">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Ignore my posts
+              </div>
+            </label>
+          </div>
+          
+          <div class="input-row">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Ignore muted words
+              </div>
+            </label>
+          </div>
+          
+          <div class="input-row ">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Ignore blocked accounts
+              </div>
+            </label>
+          </div>
+
+        </fieldset>
+
+      </div>
+      <div>
+        
+        <fieldset class="buttons">
+          
+          <button type="button" title="Cancel" class="with-label warning" onclick="nooViewState.toggleViewStateInContext(event, '.timeline', 'settings-visible')">
+            <span class="material-symbols-outlined">cancel</span>
+            <div>Cancel</div>
+          </button>
+          
+          <button type="button" title="Delete post" class="with-label primary">
+            <span class="material-symbols-outlined">save</span>
+            <div>Save</div>
+          </button>
+
+        </fieldset>
+
+      </div>
+      
+    </form>
+
+  </div>
+
+  <div class="tl-scroll">
+
+    <div class="tl-post">
+
+      <div class="tl-post-header">
+        <div class="tl-post-author">
+          <div class="tl-post-avatar">
+            <img src="/images/luciwaves.png" alt="luciwaves profile picture">
+          </div>
+        </div>
+        <div class="tl-post-details">
+          <span>1h ago</span>
+        </div>
+      </div>
+
+      <div class="tl-post-content">
+        Here's a post of mine, it has content!<br>
+        Hello World much? haha  
+      </div>
+      
+      <div class="tl-post-footer">
+        <div class="separator"></div>
+        <ul>
+          <!--li class="two-buttons button-filled">
+            <button type="button" title="Like this post">
+              <span class="material-symbols-outlined">thumb_up</span>
+            </button>
+            <div class="dual-count">
+              <div title="123 likes">123</div>
+              <div title="7 dislikes"><span>7</span></div>
+            </div>
+            <button type="button" title="Dislike this post">
+              <span class="material-symbols-outlined">thumb_down</span>
+            </button>
+          </li-->
+          <li>
+            <button type="button" class="with-label" title="Like this post">
+              <span class="material-symbols-outlined">thumb_up</span>
+              <div title="0 likes">123</div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="with-label" title="Dislike this post">
+              <div title="8 dislikes">8</div>
+              <span class="material-symbols-outlined">thumb_down</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" title="Reply to this post" onclick="nooViewState.toggleReplyToPost(event)">
+              <span class="material-symbols-outlined">reply</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" title="Repost this">
+              <span class="material-symbols-outlined">sync</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" title="Report this post">
+              <span class="material-symbols-outlined">report</span>
+            </button>
+          </li>
+          <li>
+            <a href="/posts/post.html?id=12345" title="Permalink to this post">
+              <span class="material-symbols-outlined link-icon">link</span>
+            </a>
+          </li>
+        </ul>
+
+        <button class="expander" onclick="nooViewState.toggleViewStateInContext(event, '.tl-post', 'footer-expanded')">
+          <span class="material-symbols-outlined">add</span>
+          <span class="material-symbols-outlined">remove</span>
+        </button>
+      </div>
+      <div class="tl-post-info">
+        <p>
+          <span>State:</span>
+          <span>published.</span>
+        </p>
+        <p>
+          <span>Submitted:</span>
+          <span>2023-12-11 12:13:14</span>
+        </p>
+        <p>
+          <span>Published:</span>
+          <span>2023-12-11 12:13:14</span>
+        </p>
+        <p>
+          <span>Likes/Dislikes:</span>
+          <span>123 / 8 - 15:1 ratio.</span>
+        </p>
+        <p>
+          <span>Word Count:</span>
+          <span>134 characters, 12 words.</span>
+        </p>
+        <p>
+          <span>Hashtags:</span>
+          <span>none.</span>
+        </p>
+        <p>
+          <span>Media:</span>
+          <span>none.</span>
+        </p>
+        <p>
+          <span>Is AI Generated?</span>
+          <span>no.</span>
+        </p>
+        <p>
+          <span>AI Tags:</span>
+          <span class="tag">#self</span>
+          <span class="tag">#post</span>
+          <span class="tag">#socialmedia</span>
+        </p>
+        <p>
+          <span>AI Colors:</span>
+          <span class="tag color-tag" style="background-color: #111111; color: #fff">#11111</span>
+        </p>
+        <p class="multi-row">
+          <span>AI Analysis:</span>
+          <span>This post taks about itself. It has a reference
+            to "Hello World", a common trope in computer programming. 
+            It can be slightly funny.
+          </span>
+        </p>
+        <p class="buttons">
+          <button type="button" title="Delete post" class="with-label danger">
+            <span class="material-symbols-outlined">delete</span>
+            <div>Delete Post</div>
+          </button>
+        </p>
+        <div class="tl-post-confirm" style="display: none;">
+          <p class="txt-shadow-dark">
+            Confirm doing this?
+          </p>
+          <p>
+            <button type="button" title="Delete post" class="with-label warning">
+              <span class="material-symbols-outlined">cancel</span>
+              <div>No</div>
+            </button>
+            &nbsp;
+            <button type="button" title="Delete post" class="with-label">
+              <span class="material-symbols-outlined">check</span>
+              <div>Yes</div>
+            </button>
+          </p>
+        </div>
+      </div>
+      
+    </div>
+
+    <div hx-get="/components/tl-post-reply.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+    <div class="tl-post">
+
+      <div class="tl-post-header">
+        <div class="tl-post-author">
+          <div class="tl-post-avatar">
+            <img src="/images/luciwaves.png" alt="luciwaves profile picture">
+          </div>
+        </div>
+        <div class="tl-post-details">
+          <span>7h ago</span>
+        </div>
+      </div>
+
+      <div class="tl-post-content">
+        Ooooh boy, another post! That's crazy.<br>
+        two lines
+      </div>
+      
+      <div class="tl-post-footer">
+        <div class="separator"></div>
+        <ul>
+          <li>
+            <button type="button" class="with-label" title="Like this post">
+              <span class="material-symbols-outlined">thumb_up</span>
+              <div title="123 likes">123</div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="with-label" title="Dislike this post">
+              <div title="9 dislikes">9</div>
+              <span class="material-symbols-outlined">thumb_down</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" title="Reply to this post" onclick="nooViewState.toggleReplyToPost(event)">
+              <span class="material-symbols-outlined">reply</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" title="Repost this">
+              <span class="material-symbols-outlined">sync</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" title="Report this post">
+              <span class="material-symbols-outlined">report</span>
+            </button>
+          </li>
+          <li>
+            <a href="/posts/post.html?id=12345" title="Permalink to this post">
+              <span class="material-symbols-outlined link-icon">link</span>
+            </a>
+          </li>
+        </ul>
+
+        <button class="expander" onclick="nooViewState.toggleViewStateInContext(event, '.tl-post', 'footer-expanded')">
+          <span class="material-symbols-outlined">add</span>
+          <span class="material-symbols-outlined">remove</span>
+        </button>
+      </div>
+      <div class="tl-post-info">
+        <p>
+          <span>State:</span>
+          <span>published.</span>
+        </p>
+        <p>
+          <span>Submitted:</span>
+          <span>2023-12-11 12:13:14</span>
+        </p>
+        <p>
+          <span>Published:</span>
+          <span>2023-12-11 12:13:14</span>
+        </p>
+        <p>
+          <span>Likes/Dislikes:</span>
+          <span>123 / 8 - 15:1 ratio.</span>
+        </p>
+        <p>
+          <span>Word Count:</span>
+          <span>134 characters, 12 words.</span>
+        </p>
+        <p>
+          <span>Hashtags:</span>
+          <span>none.</span>
+        </p>
+        <p>
+          <span>Media:</span>
+          <span>none.</span>
+        </p>
+        <p>
+          <span>Is AI Generated?</span>
+          <span>no.</span>
+        </p>
+        <p>
+          <span>AI Tags:</span>
+          <span class="tag">#self</span>
+          <span class="tag">#post</span>
+          <span class="tag">#socialmedia</span>
+        </p>
+        <p>
+          <span>AI Colors:</span>
+          <span class="tag color-tag" style="background-color: #111111; color: #fff">#11111</span>
+        </p>
+        <p class="multi-row">
+          <span>AI Analysis:</span>
+          <span>This post taks about itself. It has a reference
+            to "Hello World", a common trope in computer programming. 
+            It can be slightly funny.
+          </span>
+        </p>
+        <p class="buttons">
+          <button type="button" title="Delete post" class="with-label danger">
+            <span class="material-symbols-outlined">delete</span>
+            <div>Delete Post</div>
+          </button>
+        </p>
+        <div class="tl-post-confirm" style="display: none;">
+          <p class="txt-shadow-dark">
+            Confirm doing this?
+          </p>
+          <p>
+            <button type="button" title="Delete post" class="with-label warning">
+              <span class="material-symbols-outlined">cancel</span>
+              <div>No</div>
+            </button>
+            &nbsp;
+            <button type="button" title="Delete post" class="with-label">
+              <span class="material-symbols-outlined">check</span>
+              <div>Yes</div>
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+
+</div>
+
+
+

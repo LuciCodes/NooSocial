@@ -1,0 +1,132 @@
+
+form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 420px;
+  
+  padding: 10px;
+  border-radius: 25px;
+  background: rgb(227,227,227);
+  background: linear-gradient(0deg, rgba(227,227,227,1) 0%, rgba(255,255,255,1) 100%); 
+  border: 3px solid #737373;
+
+  box-shadow: 0px 4px 24px #000;
+}
+
+  form.no-style {
+    background: transparent;
+    border-radius: 0;
+    border:none;
+    box-shadow: none;
+  }
+
+  .bar {
+    margin-bottom: -3em;
+    text-align: right;
+    width: 100%;
+  }
+  
+  .close-window {
+
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+
+    padding: 0;
+    margin: 0.4em 0.4em -0.4em -2em;
+
+    border-radius: 1em;
+    color: var(--red4);
+    background-color: transparent;
+    border: none !important;
+  }
+
+  form h4 {
+
+    padding: 1em 0em 0.5em 0em;
+  }
+  
+  form fieldset {
+
+    margin-top: 1.5rem;
+    border: none;
+  }
+
+  form fieldset legend {
+
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  form fieldset > div {
+    margin:auto;
+    padding-bottom: 1em;
+    width: 80%;
+    text-align:center;
+  }
+  
+  form > div input[type="text"] {
+    width: 92%;
+  }
+
+  form label {
+
+    display:inline-block;
+    width:100%;
+    text-align:left;
+  }
+
+  form .tip {
+    font-size: 0.7em;
+    padding:0.4em;
+    opacity:0.8;
+    text-align:left;
+  }
+
+  
+.state-loading form > div,
+.state-loading form > button,
+.state-loading form > h4 {
+  opacity: 0;
+}
+
+.loader { display: none; }
+
+.state-loading form  {
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+}
+
+.state-loading form > .loader {
+
+  opacity: 1;
+  display: block;
+  position: relative;
+  top: 11em;
+  padding: 0;
+
+  width: 100px;
+}
+
+#frmChangePassword {
+ display: none; 
+}
+
+.state-new-password-required #frmLogin {
+  display: none; 
+}
+
+.state-new-password-required #frmChangePassword {
+  display: flex; 
+}
+
+#lblChangePassword_AccountName {
+  font-size: 1.4em;
+}

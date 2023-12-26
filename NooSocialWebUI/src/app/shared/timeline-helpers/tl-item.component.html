@@ -1,0 +1,187 @@
+<div 
+  [ngClass]="{ 
+    'timeline': true, 
+    'state-settings-visible': flagSettingsExpanded 
+  }"
+>            
+  <div class="tl-header">
+
+    <button type="button" class="btn-circle tl-header-menu-btn" (click)="flagSettingsExpanded = !flagSettingsExpanded">
+      <span class="material-symbols-outlined">settings</span>
+    </button>
+
+    <h4 [title]="timeline.description">
+      <span>{{ timeline.title }}</span>
+    </h4>
+    <ul class="tl-recent-authors">
+      <li *ngFor="let author of timeline.recentAuthors">
+        <button type="button">
+          <img [src]="author.avatar" alt="{{ author.nickname }}'s profile picture">
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tl-settings">
+    
+    <h3>Timeline Settings</h3>
+    <form class="no-style">
+
+      <div>
+
+        <fieldset class="search">
+          <legend>Search Parameters</legend>
+          <div class="input-row">
+            <label>
+              <div class="label-text">
+                Users:
+              </div>
+              <div class="input">
+
+                <select>
+                  <option value="1">All</option>
+                  <option value="2">All Humans</option>
+                  <option value="3">All Bots</option>
+                  <option value="4">Humans I Follow</option>
+                  <option value="5">Bots I Follow</option>
+                  <option value="6">Humans I Don't Follow</option>
+                  <option value="7">Bots I Don't Follow</option>
+                  <option value="8">Custom include list</option>
+                  <option value="9">Custom exclude list</option>
+                </select>
+  
+              </div>
+            </label>
+          </div>
+          <div class="input-row">
+            <label>
+              <div class="label-text">
+                Date Published:
+              </div>
+              <div class="input">
+
+                <select>
+                  <option value="1">All Time</option>
+                  <option value="2">Today</option>
+                  <option value="3">This Week</option>
+                  <option value="4">Past 7 days</option>
+                  <option value="5">This Month</option>
+                  <option value="6">Past 30 days</option>
+                  <option value="7">This Year</option>
+                  <option value="8">Past 365 days</option>
+                  <option value="9">Custom</option>
+                </select>
+  
+              </div>
+            </label>
+          </div>
+          <div class="input-row">
+            <label>
+              <div class="label-text">
+                Primary Sorting:
+              </div>
+              <div class="input">
+
+                <select>
+                  <option value="1">Published date ASC</option>
+                  <option value="2">Published date DESC</option>
+                  <option value="3">Text ASC</option>
+                  <option value="4">Text DESC</option>
+                  <option value="5">Username ASC</option>
+                  <option value="6">Username DESC</option>
+                  <option value="7">Engagement ASC</option>
+                  <option value="8">Engagement DESC</option>
+                </select>
+  
+              </div>
+            </label>
+          </div>
+          <div class="input-row">
+            <label>
+              <div class="label-text">
+                Secondary Sorting:
+              </div>
+              <div class="input">
+
+                <select>
+                  <option value="0">(none)</option>
+                  <option value="1">Published date ASC</option>
+                  <option value="2">Published date DESC</option>
+                  <option value="3">Text ASC</option>
+                  <option value="4">Text DESC</option>
+                  <option value="5">Username ASC</option>
+                  <option value="6">Username DESC</option>
+                  <option value="7">Engagement ASC</option>
+                  <option value="8">Engagement DESC</option>
+                </select>
+  
+              </div>
+            </label>
+          </div>
+        </fieldset>
+  
+        <fieldset class="post-search">
+          <legend>Search Flags</legend>
+          
+          <div class="input-row">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Ignore my posts
+              </div>
+            </label>
+          </div>
+          
+          <div class="input-row">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Ignore muted words
+              </div>
+            </label>
+          </div>
+          
+          <div class="input-row ">
+            <label>
+              <div class="label-text pointer">
+                <input type="checkbox">
+                Ignore blocked accounts
+              </div>
+            </label>
+          </div>
+
+        </fieldset>
+
+      </div>
+      <div>
+        
+        <fieldset class="buttons">
+          
+          <button type="button" title="Cancel" class="btn btn-sm with-label btn-warning" (click)="flagSettingsExpanded = false">
+            <span class="material-symbols-outlined">cancel</span>
+            <div>Cancel</div>
+          </button>
+          
+          <button type="button" title="Delete post" class="btn btn-sm with-label btn-primary">
+            <span class="material-symbols-outlined">save</span>
+            <div>Save</div>
+          </button>
+
+        </fieldset>
+
+      </div>
+      
+    </form>
+
+  </div>
+
+  <div class="tl-scroll">
+
+    <app-tl-post *ngFor="let post of timeline.posts " [post]="post"></app-tl-post>    
+
+  </div>
+
+</div>
+
+
+

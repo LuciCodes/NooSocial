@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Noo Social - My Feed</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <meta name="description" content="A new place to network" />
+
+  <meta property="og:url" content="https://www.NooSocial.co" />
+  <meta property="og:title" content="NooSocial" />
+  <meta property="og:description" content="A new place to network" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="/css/main.css" />
+
+  <script src="/lib/htmx.min.js"></script>
+  <script src="/lib/jquery-3.7.1.min.js"></script>
+
+  <script src="/lib/nooSocial-bundle.js"></script>
+
+  <script src="/js/consts.js"></script>
+  <script src="/js/page-modules.js" type="module"></script>
+  <script src="/js/page.js" ></script>
+
+
+</head>
+<body onload="Page_Load()">
+  
+  <section id="pnlMainMenu" class="gradient-top-menu">
+
+    <div>
+      <button class="no-chrome menu" onclick="nooViewState.toggleViewState('content-menu-expanded')"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+
+    <div class="avatar" style="background-image:url(/images/luciwaves.png)">
+      &nbsp;
+    </div>
+    <div class="user">
+
+      <a href="#" noo-bind-to="user.nickname">&nbsp;</a>
+
+      <div class="submenu">
+        <ul>
+          <li>
+            <button onclick="nooViewState.setViewState('view-profile')" type="button">
+              <span class="material-symbols-outlined">face</span>
+              <span>My Profile</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="nooViewState.setViewState('view-settings')" type="button">
+              <span class="material-symbols-outlined">settings</span>
+              <span>Settings</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="Logout()" type="button">
+              <span class="material-symbols-outlined">logout</span>
+              <span>Logout</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+  
+  <section id="pnlContentWindow">
+
+    <section id="pnlContentMenu">
+
+      <div>
+        <a href="#">
+          <span class="material-symbols-outlined">watch</span>
+          <span>Main Timeline</span>
+        </a>
+      </div>
+ 
+    </section>
+
+      <section id="pnlContent">
+
+        <div class="timelines" hx-get="/components/timeline.html" hx-trigger="load">
+          <div class="progress"><div class="color"></div></div>
+        </div>
+
+      </section>
+      
+  </section>
+
+  <div hx-get="/components/login-overlay.html" hx-trigger="load"></div>
+
+</body>
+</html>
