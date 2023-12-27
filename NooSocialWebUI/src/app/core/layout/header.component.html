@@ -11,13 +11,14 @@
 
   <div *ngIf="currentUser$ | async as currentUser" class="avatar">
     <a
+      href="javascript:;"
       class="nav-link"
-      [routerLink]="['/profile', currentUser.username]"
-      routerLinkActive="active"
+      [title]="currentUser.nickname"
+      (click)="toggleUserAccount()"
     >
-      <img [src]="currentUser.avatar" alt="">
+      <img [src]="currentUser.avatar" [alt]="currentUser.nickname">
     </a>
-    {{ currentUser.username }}
+    {{ currentUser.nickname }}
   </div>
 
   <div *ngIf="!(userService.isAuthenticated | async)" class="create-account">
@@ -81,3 +82,5 @@
 <app-about></app-about>
 
 <app-login-subscribe></app-login-subscribe>
+
+<app-user-account></app-user-account>

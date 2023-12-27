@@ -165,9 +165,24 @@ button:hover {
 
 .btn-outline {
   background-color: transparent;
+  border-radius: 1rem;
+}
+
+.btn-danger.btn-outline {
+  color: #861c26;
+}
+
+.btn-danger.btn-outline:hover {
+  color: #f5e1e1;
 }
 
 .pointer { cursor: pointer; }
+
+.noo-progress-container .noo-progress {
+  margin: auto;
+  margin-top: 2em;
+  max-width: 100px;
+}
 
 .btn-circle {
   

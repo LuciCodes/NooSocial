@@ -47,6 +47,7 @@ export class EditorComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    /*
     if (this.route.snapshot.params["slug"]) {
       combineLatest([
         this.articleService.get(this.route.snapshot.params["slug"]),
@@ -62,6 +63,7 @@ export class EditorComponent implements OnInit, OnDestroy {
           }
         });
     }
+    */
   }
 
   ngOnDestroy() {

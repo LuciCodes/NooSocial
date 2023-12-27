@@ -18,6 +18,9 @@
                 type="text"
               />
             </label>
+            <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+              <p class="error-message">Invalid username</p>
+            </div>
           </div>
           <!--div class="form-group"-->
           <div>
@@ -29,71 +32,35 @@
                 type="password"
               />
             </label>
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+              <p class="error-message">Invalid password</p>
+            </div>
+          </div>
+
+          <div *ngIf="userService.signInError != ''">
+            <p class="error-message">
+              {{ userService.signInError }}
+            </p>
+          </div>
+
+          <div class="noo-progress-container">
+
+            <div class="noo-progress" *ngIf="isSubmitting"><div class="color"></div></div>
+
           </div>
 
           <div>
               <button
               class="btn btn-lg btn-primary"
               [disabled]="!loginForm.valid"
+              *ngIf="!isSubmitting"
               type="submit"
             >
               Login
             </button>
           </div>
-
         </fieldset>
-
       </form>
-
-    </div>
-  </div>
-  
-  <div class="page">
-
-    <div class="page-content">
-
-      <form action="">
-
-        <fieldset>
-          <legend>Create an Account</legend>
-  
-          <div>
-            <label>
-  
-              <span>Username:</span>
-              <input type="text">
-  
-            </label>
-          </div>
-          
-          <div>
-            <label>
-  
-              <span>Password:</span>
-              <input type="password">
-  
-            </label>
-          </div>
-          
-          <div>
-            <label>
-  
-              <span>Confirm Password:</span>
-              <input type="password">
-  
-            </label>
-          </div>
-          
-          <div>
-  
-            <button type="button" class="btn btn-primary">Create Account</button>
-  
-          </div>
-  
-        </fieldset>
-
-      </form>
-
     </div>
   </div>
 </div>

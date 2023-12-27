@@ -23,7 +23,8 @@
 }
 
 .state-page-visible-about .page-container.page-about,
-.state-page-visible-login-subscribe .page-container.page-login-subscribe {
+.state-page-visible-login-subscribe .page-container.page-login-subscribe,
+.state-page-visible-user-account  .page-container.page-user-account {
 
   border-top-color:rgba(0, 0, 0, 0.25);
   border-bottom-color: rgba(255, 255, 255, 0.85);
@@ -183,6 +184,15 @@
 .state-page-selected-about-growth-and-moderation .growth-and-moderation,
 .state-page-selected-about-machine-policy .machine-policy,
 .state-page-selected-about-selling-out .selling-out {
+
+  display: inline-block;
+}
+
+.state-page-selected-user-account-general-information .general-information,
+.state-page-selected-user-account-timeline-settings .timeline-settings,
+.state-page-selected-user-account-machine-accounts .machine-accounts,
+.state-page-selected-user-account-import-data .import-data,
+.state-page-selected-user-account-export-data .export-data {
 
   display: inline-block;
 }

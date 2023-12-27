@@ -5,7 +5,6 @@ import { AsyncPipe, NgClass, NgForOf } from "@angular/common";
 import { takeUntil, tap } from "rxjs/operators";
 import { Subject } from "rxjs";
 import { UserService } from "../../core/services/user.service";
-import { LetDirective } from "@rx-angular/template/let";
 import { ShowAuthedDirective } from "../../shared/show-authed.directive";
 
 import { TimelineListComponent } from "../../shared/timeline-helpers/tl-list.component";
@@ -32,7 +31,6 @@ import { ProfileInfo } from "../../core/models/profile-info.model";
     ProfileListComponent,
     UserAvatarComponent,
     AsyncPipe,
-    LetDirective,
     NgForOf,
     ShowAuthedDirective,
   ],
@@ -71,11 +69,19 @@ export class FeedComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
+    console.log('FeedComponent.ngOnInit()');
+
     this.userService.isAuthenticated
       .pipe(
         tap((isAuthenticated) => {
+
+          console.log('FeedComponent.isAuthenticated? ' + isAuthenticated);
+          
+          this.vs.flagHasUser = isAuthenticated;
+          
           if (isAuthenticated) {
-            //this.setListTo("feed");
+            
+
           } else {
             //this.setListTo("all");
           }
@@ -91,7 +97,12 @@ export class FeedComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$)
       )
       .subscribe(
-        (isAuthenticated: boolean) => (this.isAuthenticated = isAuthenticated)
+        (isAuthenticated: boolean) => {
+          
+          console.log('FeedComponent.subscribe ' + isAuthenticated);
+
+          this.isAuthenticated = isAuthenticated;
+        }
       );
   }
 

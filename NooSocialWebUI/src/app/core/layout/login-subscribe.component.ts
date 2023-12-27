@@ -32,7 +32,7 @@ interface loginForm {
 })
 export class LoginSubscribeComponent implements OnInit {
   
-  authType = "";
+  authType = '';
   
   isSubmitting = false;
   loginForm: FormGroup<loginForm>;
@@ -41,6 +41,7 @@ export class LoginSubscribeComponent implements OnInit {
   constructor(
     private readonly route: ActivatedRoute,
     private readonly router: Router,
+    public readonly userService: UserService,
     private vs: ViewStateService
   ) {
 
@@ -65,19 +66,6 @@ export class LoginSubscribeComponent implements OnInit {
   
   ngOnInit(): void {
 
-    this.authType = this.route.snapshot.url.at(-1)!.path;
-
-    //  this.title = this.authType === "login" ? "Sign in" : "Sign up";
-
-    if (this.authType === "register" && this.loginForm != null) {
-      this.loginForm.addControl(
-        "username",
-        new FormControl("", {
-          validators: [Validators.required],
-          nonNullable: true,
-        })
-      );
-    }
   }
 
   ngOnDestroy() {
@@ -89,27 +77,17 @@ export class LoginSubscribeComponent implements OnInit {
 
     this.isSubmitting = true;
 
-    /*
-    let observable =
-      this.authType === "login"
-        ? this.userService.login(
-            this.loginForm.value as { email: string; password: string }
-          )
-        : this.userService.register(
-            this.loginForm.value as {
-              email: string;
-              password: string;
-              username: string;
-            }
-          );
+    this.userService.signInUser(
 
-    observable.pipe(takeUntil(this.destroy$)).subscribe({
-      next: () => void this.router.navigate(["/"]),
-      error: (err) => {
-        this.errors = err;
-        this.isSubmitting = false;
-      },
+      this.loginForm.value.username || '', 
+      this.loginForm.value.password || '').then((data) => {
+
+      //console.log('LOGIN-SIGNIN', data);
+    
+      if(this.userService.isAuthenticated)
+        this.vs.removeStates('page-visible-login-subscribe');
+
+      this.isSubmitting = false;
     });
-    */
   }
 }

@@ -14,9 +14,6 @@ const routes: Routes = [
     path: "feed",
     loadComponent: () =>
       import("./features/feed/feed.component").then((m) => m.FeedComponent),
-    canActivate: [
-      () => inject(UserService).isAuthenticated.pipe(map((isAuth) => !isAuth)),
-    ],
   },
   {
     path: "login",
@@ -100,7 +97,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      preloadingStrategy: PreloadAllModules,
+      preloadingStrategy: PreloadAllModules
     }),
   ],
   exports: [RouterModule],

@@ -10,6 +10,8 @@ export class ViewStateService {
 
   flagLoaded: boolean = false;
 
+  flagHasUser: boolean = false;
+
   selectedProfile?: ProfileInfo;
 
   get flagHamExpanded(): boolean {
@@ -217,10 +219,14 @@ export class ViewStateService {
           let username = vsInfo.substring(vsInfo.indexOf('state-avatar-selected-')).trim().replace('state-avatar-selected-', '');
 
           if (username.includes(' '))
+          
             username = username.substring(0, username.indexOf(' '))
 
             this.selectedProfile = this.findProfile(username);
         }
+
+        if (vsInfo.includes('state-page-visible-login-subscribe') && this.flagHasUser)
+          vsInfo = vsInfo.replace('state-page-visible-login-subscribe', '');
 
         document.body.setAttribute('class', vsInfo);
 

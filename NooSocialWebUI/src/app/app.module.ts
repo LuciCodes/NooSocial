@@ -14,6 +14,9 @@ import { ErrorInterceptor } from "./core/interceptors/error.interceptor";
 import { ApiInterceptor } from "./core/interceptors/api.interceptor";
 
 export function initAuth(jwtService: JwtService, userService: UserService) {
+
+  userService.initialize();
+
   return () => (jwtService.getToken() ? userService.getCurrentUser() : EMPTY);
 }
 

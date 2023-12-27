@@ -53,6 +53,7 @@ form {
   form fieldset {
 
     margin-top: 1.5rem;
+    width: 100%;
     border: none;
   }
 
@@ -129,4 +130,15 @@ form {
 
 #lblChangePassword_AccountName {
   font-size: 1.4em;
+}
+
+.error-message {
+
+  margin-top: 0.2rem;
+  padding: 0.4em;
+  font-size: 0.9em;
+
+  color: #fff28c;
+  background-color: #bd5353;
+  border-radius: 0.5rem;
 }

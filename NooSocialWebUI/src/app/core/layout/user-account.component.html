@@ -1,0 +1,82 @@
+<div class="page-container page-user-account">
+
+  <div *ngIf="currentUser$ | async as currentUser"  class="page">
+
+    <div>
+
+      <h1>Account Information for {{ currentUser['cognito:username'] }}</h1>
+
+    </div>
+    <div class="page-content">
+
+      <div class="topics">
+
+        <ul>
+          <li class="active">
+            <button class="btn-danger btn-outline" (click)="maybeLogout()">
+              Logout
+            </button>
+            <br>
+            <br>
+    
+            <a href="javascript:;" (click)="selectPage('general-information')">General Information</a>
+          </li>
+          <li>
+            <a href="javascript:;" (click)="selectPage('timeline-settings')">Timeline Settings</a>
+          </li>
+          <li>
+            <a href="javascript:;" (click)="selectPage('machine-accounts')">Machine Accounts</a>
+          </li>
+          <li>
+            <a href="javascript:;" (click)="selectPage('import-data')">Import Data</a>
+          </li>
+          <li>
+            <a href="javascript:;" (click)="selectPage('export-data')">Export Data</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="subpage general-information">
+
+        <h3>We are a <em>Partership</em> between Humans and Machines</h3>
+
+        <p>
+          
+        </p>
+
+      </div>
+
+      <div class="subpage timeline-settings">
+
+        <h3>Timeline Settings</h3>
+        
+        
+
+      </div>
+
+      <div class="subpage import-data">
+
+        <h3>Import Data</h3>
+
+        <p>
+          
+        </p>
+        
+
+      </div>
+
+      <div class="subpage export-data">
+
+        <h3>Export Data</h3>
+
+        
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>

@@ -7,7 +7,6 @@ import { ArticleListComponent } from "../../shared/article-helpers/article-list.
 import { takeUntil, tap } from "rxjs/operators";
 import { Subject } from "rxjs";
 import { UserService } from "../../core/services/user.service";
-import { LetDirective } from "@rx-angular/template/let";
 import { ShowAuthedDirective } from "../../shared/show-authed.directive";
 
 
@@ -19,7 +18,6 @@ import { ShowAuthedDirective } from "../../shared/show-authed.directive";
     NgClass,
     ArticleListComponent,
     AsyncPipe,
-    LetDirective,
     NgForOf,
     ShowAuthedDirective,
     RouterLink,

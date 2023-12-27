@@ -5,7 +5,6 @@ import { AsyncPipe, NgForOf, NgClass } from "@angular/common";
 import { takeUntil, tap } from "rxjs/operators";
 import { Subject } from "rxjs";
 import { UserService } from "../../core/services/user.service";
-import { LetDirective } from "@rx-angular/template/let";
 import { ShowAuthedDirective } from "../../shared/show-authed.directive";
 
 import { TimelineListComponent } from "../../shared/timeline-helpers/tl-list.component";
@@ -27,7 +26,6 @@ import { ProfileListComponent } from "../../shared/profile-helpers/profile-list.
     NgClass,
     UserAvatarComponent,
     AsyncPipe,
-    LetDirective,
     NgForOf,
     ShowAuthedDirective,
   ],

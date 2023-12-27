@@ -24,6 +24,7 @@ export class ShowAuthedDirective implements OnInit {
   authRef: ViewRef | undefined;
 
   ngOnInit() {
+
     this.userService.isAuthenticated.subscribe((isAuthenticated: boolean) => {
       if (
         (isAuthenticated && this.condition) ||
